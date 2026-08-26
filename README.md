@@ -52,3 +52,21 @@ This script provides the common prognostic-analysis workflow applied across the 
 
 The same prognostic-analysis framework was applied across the four study cohorts after cohort-specific outcome construction and data harmonization. Cohort-specific outcome definitions, follow-up periods, and variable construction may differ according to study design and data availability and are therefore handled before application of this common analytical workflow. The metabolically healthy (MH) subtype was used as the reference group in the Fine–Gray regression analyses.
 
+### Medication analysis in the MSDW cohort.R
+
+This script performs the medication analyses in the Mount Sinai Data Warehouse (MSDW) cohort to evaluate subtype-specific patterns of medication use and medication-associated differences in cardiometabolic biomarkers and major adverse cardiovascular events (MACE), including:
+
+- construction of medication exposure variables for glucose-lowering, antihypertensive, and lipid-lowering medications using prespecified prescription windows around the index CAD diagnosis
+- identification of prior medication use and concomitant medications within the same therapeutic class
+- characterization and visualization of medication use patterns across the four cardiometabolic subtypes
+- extraction of post-treatment cardiometabolic biomarker measurements using medication-specific lag periods and follow-up windows
+- calculation of changes in relevant biomarkers from baseline and estimation of medication-associated biomarker changes using inverse probability of treatment weighting (IPTW)
+- construction of medication-specific MACE outcomes and time-to-event variables using prespecified treatment-effect lag periods
+- propensity score matching (PSM) of medication users and non-users within each cardiometabolic subtype, with adjustment for demographic characteristics, baseline cardiometabolic features, prior heart failure, prior medication use, and concomitant therapy as appropriate
+- assessment of covariate balance after PSM using standardized mean differences
+- estimation of medication-associated hazard ratios for MACE using Cox proportional hazards regression with robust standard errors in the overall cohort and within individual cardiometabolic subtypes
+- visualization of cumulative MACE incidence among medication users across cardiometabolic subtypes
+- comparison of medication-associated hazard ratios across cardiometabolic subtypes using ratios of hazard ratios (RHRs), including pairwise subtype comparisons with 95% confidence intervals and corresponding P values
+- generation of figures and tabulated results for medication use patterns, biomarker changes, propensity-score balance, cumulative incidence, subtype-specific medication–MACE associations, and pairwise RHR analyses
+
+Medication analyses were observational and were designed to characterize subtype-specific heterogeneity in medication-associated biomarker and cardiovascular outcomes rather than to establish causal treatment effects. Medication-specific eligibility criteria, exposure definitions, lag periods, covariates, and outcome construction were prespecified according to medication class and the availability of longitudinal electronic health record data.
