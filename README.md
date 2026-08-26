@@ -38,6 +38,17 @@ This script provides the common external-validation workflow applied to the IMPR
 
 The same analytical workflow was applied across the three external validation cohorts after cohort-specific data preprocessing and harmonization. Cohort-specific raw-data extraction, variable construction, and harmonization are therefore not included in this common validation script.
 
----
+### Prognostic analysis across study cohorts.R
 
-Additional scripts for external validation, prognostic analyses, medication analyses, and the web-based subtype assignment tool will be added to this repository.
+This script provides the common prognostic-analysis workflow applied across the BIPASS discovery cohort and the IMPROVE, Mount Sinai Data Warehouse (MSDW), and UK Biobank (UKB) validation cohorts, including:
+
+- construction of competing-risk outcomes for major adverse cardiovascular events (MACE), with non-cardiovascular death treated as a competing event
+- estimation of subtype-specific cumulative incidence of MACE using the Aalen–Johansen estimator
+- calculation of MACE event counts and crude event proportions across cardiometabolic subtypes
+- overall comparison of cumulative incidence functions using Gray's test
+- pairwise Gray's tests between cardiometabolic subtypes with adjustment for multiple comparisons
+- Fine–Gray competing-risk regression to estimate age- and sex-adjusted subdistribution hazard ratios for MACE
+- estimation of follow-up duration using the reverse Kaplan–Meier method
+
+The same prognostic-analysis framework was applied across the four study cohorts after cohort-specific outcome construction and data harmonization. Cohort-specific outcome definitions, follow-up periods, and variable construction may differ according to study design and data availability and are therefore handled before application of this common analytical workflow. The metabolically healthy (MH) subtype was used as the reference group in the Fine–Gray regression analyses.
+
