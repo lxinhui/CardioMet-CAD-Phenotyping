@@ -2,7 +2,7 @@
 
 This repository contains the source code used in the study:
 
-**Data-driven cardiometabolic phenotyping reveals distinct risk patterns in coronary artery disease**
+**Unsupervised cardiometabolic phenotyping reveals prognostic and treatment-associated heterogeneity in coronary artery disease**
 
 The repository includes scripts for data preprocessing, feature selection, unsupervised clustering, subtype assignment, external validation, prognostic analyses, medication analyses, and figure generation.
 
