@@ -2,8 +2,8 @@
 # CardioMet: Clustering analysis in the BIPASS cohort
 #
 # Study:
-# Data-driven cardiometabolic phenotyping reveals distinct risk patterns
-# in coronary artery disease
+# Unsupervised cardiometabolic phenotyping reveals prognostic and 
+# treatment-associated heterogeneity in coronary artery disease
 #
 # Description:
 # This script performs the complete clustering workflow in the BIPASS
